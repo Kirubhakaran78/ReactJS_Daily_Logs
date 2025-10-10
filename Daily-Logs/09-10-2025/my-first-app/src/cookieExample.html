@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //cookies(store - 4kb)
+        document.cookie = "usename=kirubhakaran; expires=fri 12-10-2025 08:10:56 UTC; path=/";
+        console.log(document.cookie);
+
+        //session - delete when the browser tab in closed and persists data when reloading and navigation (store ~ 5-10 mb)
+        //dont share the data with different browser tab
+        sessionStorage.setItem("sessionName","TempUser");
+        sessionStorage.setItem("sessionName1","TempUser1");
+        sessionStorage.setItem("sessionName2","TempUser2");
+        sessionStorage.setItem("sessionName3","TempUser3");
+        console.log(sessionStorage.getItem("sessionName"));
+        sessionStorage.removeItem("sessionName");
+        // sessionStorage.clear();
+
+        //Local Storage - data persits even after the tab is closed (store)
+        //storing the offline application data, storing user preferences(themes,language).
+        //caching the data to reduce server requests
+        localStorage.setItem("Localname1","tempLocalstroagedescription1");
+        localStorage.setItem("Localname2","tempLocalstroagedescription1");
+        localStorage.setItem("Localname3","tempLocalstroagedescription1");
+        localStorage.setItem("Localname4","tempLocalstroagedescription1");
+
+        //get item
+        console.log(localStorage.getItem("Localname1")); // need to mention key name
+        console.log(localStorage.getItem("Localname2"));
+        console.log(localStorage.getItem("Localname3"));
+        console.log(localStorage.getItem("Localname4"));
+
+        //remove item
+        // localStorage.removeItem("Localname3");
+
+        //clear all item
+        // localStorage.clear();
+
+    </script>
+</body>
+
+</html>

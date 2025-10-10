@@ -1,0 +1,16 @@
+// @use "./MyButton2.module.scss" as * ;
+
+// $primary-color: red;
+// $primary-background-color:black;
+
+
+@mixin button($primary-color,$primary-background-color){
+    background-color: $primary-background-color;
+    color: $primary-color;
+}
+
+
+.mybutton{
+    @include button(rgb(4, 122, 24), white);
+    padding: 10px 20px;
+}
