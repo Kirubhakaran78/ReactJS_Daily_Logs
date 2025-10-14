@@ -1,0 +1,38 @@
+.login_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+   /* background-color: #1B3C53 !important; */
+   background-image: url('../../../public/bg.jpg') !important;
+   background-position: center;
+   background-size: cover;
+   color: #fff !important;
+}
+
+.main_container{
+    border: 0px solid black;
+    padding: 80px;
+    background-color: transparent;
+    border-radius: 5px;
+     color: black;
+     box-shadow: 10px 10px 10px grey;
+}
+
+.form_css{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.home_header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+
+
+
