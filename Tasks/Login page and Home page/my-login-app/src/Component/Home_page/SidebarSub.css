@@ -1,0 +1,8 @@
+.sidebar-sub {
+  background-color: #0049B2; /* full sidebar background */
+  height: 100vh;             /* make it full viewport height */
+  padding-top: 10px;          /* optional padding */
+}
+.sidebar-sub-title{
+    color: black;
+}

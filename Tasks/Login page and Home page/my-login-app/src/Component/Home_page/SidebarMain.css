@@ -1,0 +1,12 @@
+.sidebar-main{
+    background-color: #0049B2;
+}
+
+.sidebar-btn {
+  color: #ADD8E6;           /* for react-icons */
+  transition: color 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  color: white;
+}

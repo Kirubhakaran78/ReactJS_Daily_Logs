@@ -6,7 +6,12 @@ import Login from './Component/Login_page/Login';
 import { Route,Routes,BrowserRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Home from './Component/Home_page.jsx/Home';
+import Home from './Component/Home_page/Home';
+import LogilabSDMS from './Component/Home_page/LogilabSDMS';
+import HomeMain from './Component/Home_page/HomeMain';
+import ResizableTable from './Component/ResizableTable';
+import DataTable from './Component/DataTable';
+import GridExample from './Component/GridExample';
 
 function App() {
   return (
@@ -20,7 +25,13 @@ function App() {
           
         </Routes>
       </BrowserRouter > */}
-      <Home/>
+      {/* <Home/> */}
+      {/* <LogilabSDMS/> */}
+      {/* <HomeMain/> Need to run this */}
+      {/* <ResizableTable/> */}
+      {/* <DataTable/> MUI - data grid */}
+      <GridExample/>
+
     </>
   );
 }
