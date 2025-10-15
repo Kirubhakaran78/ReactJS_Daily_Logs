@@ -1,0 +1,155 @@
+/* =========================
+   GRID BASE STRUCTURE
+========================= */
+.custom-grid table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* Header Cells */
+.custom-grid table thead th {
+  position: relative;
+  background: #f8f9fa;
+  background-clip: padding-box;
+  z-index: 2;
+  padding: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* =========================
+   HEADER DIVIDER LINES
+========================= */
+.custom-grid table thead th::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: #dee2e6;
+  z-index: 9999; /* make sure line stays above all header elements */
+  pointer-events: none;
+}
+
+/* =========================
+   ICON BOX STYLES
+========================= */
+.custom-grid .icon-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #dee2e6;
+  background: transparent !important;
+  transform: translateX(8px);
+  opacity: 0;
+  z-index: 4 !important;
+  transition: transform 0.18s ease, opacity 0.18s ease, background 0.12s ease;
+  pointer-events: none;
+}
+
+/* Smooth slide-in from right on hover */
+.custom-grid .grid-th:hover .icon-box,
+.custom-grid .grid-th.icon-hover .icon-box {
+  transform: translateX(0);
+  opacity: 1;
+  background: #e9ecef;
+  pointer-events: auto;
+}
+
+/* Hide Bootstrap caret */
+.custom-grid .no-caret::after {
+  display: none !important;
+}
+
+/* =========================
+   RESIZE HANDLE
+========================= */
+.custom-grid .resize-handle {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  cursor: col-resize;
+  z-index: 5;
+  background: transparent;
+}
+
+.custom-grid .resize-handle.resizing {
+  background: rgba(13, 110, 253, 0.25);
+}
+
+/* =========================
+   HEADER FOCUS VISIBILITY
+========================= */
+.custom-grid .grid-th:focus-visible,
+.custom-grid .icon-box:focus-visible,
+.custom-grid .resize-handle:focus-visible {
+  outline: 2px solid rgba(13, 110, 253, 0.35);
+}
+
+/* =========================
+   BODY CELL LINES
+========================= */
+.custom-grid table tbody td {
+  border-right: 1px solid #dee2e6;
+}
+
+/* =========================
+   ROW HIGHLIGHT STYLES
+========================= */
+/* Highlight selected row */
+.custom-grid tbody tr.selected-row td {
+  background-color: #e9ecef !important;
+  transition: background-color 0.15s ease !important;
+}
+
+/* Hover highlight for unselected rows */
+.custom-grid tbody tr:not(.selected-row):hover td {
+  background-color: #f8f9fa !important;
+}
+
+/* =========================
+   INPUT FOCUS + SELECTION
+========================= */
+.custom-grid .form-control:focus {
+  border-color: #adb5bd !important;
+  box-shadow: 0 0 0 0.15rem rgba(173, 181, 189, 0.25) !important;
+}
+
+/* Remove blue selection highlight on headers while resizing */
+.custom-grid ::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Disable user-select on headers and handles */
+.custom-grid .grid-th,
+.custom-grid .grid-th *,
+.custom-grid .resize-handle,
+.custom-grid .icon-box {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 🔥 Final fix: ensure Bootstrap can't override the selected row color */
+.custom-grid table.table tbody tr.selected-row,
+.custom-grid table.table tbody tr.selected-row td {
+  background-color: #e9ecef !important; /* light grey */
+  transition: background-color 0.15s ease !important;
+}
+
+/* Optional: subtle hover for non-selected rows */
+.custom-grid table.table tbody tr:not(.selected-row):hover td {
+  background-color: #f8f9fa !important;
+}

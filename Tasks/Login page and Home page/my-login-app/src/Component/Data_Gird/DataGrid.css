@@ -1,0 +1,169 @@
+/* src/DataGrid.css - final version for consistent separators + dropdown overlay */
+
+/* Base table */
+.custom-grid table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+  font-family: inherit;
+}
+
+/* remove default padding on th/td - we use inner wrappers */
+.custom-grid table thead th,
+.custom-grid table tbody td {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header style */
+.custom-grid table thead th {
+  position: relative;
+  background: #f8f9fa;
+  vertical-align: middle;
+  text-align: left;
+  z-index: 2;
+  font-weight: 600;
+}
+
+/* header inner wrapper — used in JSX as .th-content */
+.custom-grid .th-content { padding: 12px 8px; display: flex; align-items: center; }
+
+/* horizontal lines */
+.custom-grid table thead th,
+.custom-grid table tbody td { border-bottom: 1px solid #dee2e6; }
+
+/* header vertical divider drawn as pseudo-element so it sits above icon */
+.custom-grid table thead th::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: #dee2e6;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* body vertical separators */
+.custom-grid table tbody td { border-right: 1px solid #dee2e6; }
+
+/* make cell content padded */
+.custom-grid td .cell-content,
+.custom-grid th .cell-content { padding: 10px 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* icon box (chevron) - clickable, no transform to avoid stacking issues */
+.custom-grid .grid-th { padding: 0; position: relative; }
+.custom-grid .icon-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #dee2e6;
+  background: transparent;
+  z-index: 1500;
+  opacity: 0;
+  transition: opacity 180ms ease, background 120ms ease;
+  pointer-events: auto;
+  overflow: visible;
+}
+.custom-grid .grid-th:hover .icon-box,
+.custom-grid .grid-th.icon-hover .icon-box {
+  opacity: 1;
+  background: #e9ecef;
+}
+
+/* neutral chevron color & hide bootstrap caret */
+.custom-grid .icon-box .dropdown-toggle,
+.custom-grid .icon-box .dropdown-toggle:focus,
+.custom-grid .icon-box .dropdown-toggle:hover {
+  color: #495057 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 4px !important;
+}
+.custom-grid .no-caret::after { display: none !important; }
+
+/* Dropdown menu z-index (very high so it overlays everything) */
+.custom-grid .dropdown-menu { z-index: 99999 !important; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.popper, .bs-popover-right, .dropdown-menu.show { z-index: 99999 !important; }
+
+/* resize handle */
+.custom-grid .resize-handle {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  cursor: col-resize;
+  z-index: 1600;
+  background: transparent;
+}
+.custom-grid .resize-handle.resizing { background: rgba(13,110,253,0.12); }
+
+/* selected row / hover */
+.custom-grid tbody tr.selected-row,
+.custom-grid tbody tr.selected-row td { background-color: #e9ecef !important; transition: background-color 0.15s ease !important; }
+.custom-grid tbody tr:not(.selected-row):hover td { background-color: #f8f9fa !important; }
+.custom-grid table.table > tbody > tr.selected-row, .custom-grid table.table > tbody > tr.selected-row > td { background-color: #e9ecef !important; }
+
+/* search wrapper and icon inside search */
+.custom-grid .search-wrapper { position: relative; width: 100%; }
+.custom-grid .search-wrapper .form-control { padding-left: 30px; height: 34px; }
+.custom-grid .search-wrapper .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #6c757d; pointer-events: none; }
+
+/* focus / selection */
+.custom-grid .form-control:focus { border-color: #adb5bd !important; box-shadow: 0 0 0 0.12rem rgba(173,181,189,0.18) !important; }
+.custom-grid ::selection { background: transparent !important; color: inherit !important; }
+
+/* prevent user-select on header/handles */
+.custom-grid .grid-th, .custom-grid .grid-th *, .custom-grid .resize-handle, .custom-grid .icon-box {
+  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+
+/* FIX: remove double vertical lines between header & search row columns */
+
+/* 1) Use the ::after pseudo-element as the single divider for header cells */
+.custom-grid table thead th::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: #dee2e6;
+  z-index: 9999;       /* keep it on top so it's the visible single line */
+  pointer-events: none;
+}
+
+/* 2) Remove any right-border from header/search <th> so the pseudo-element is the only line */
+.custom-grid table thead th,
+.custom-grid table thead tr:nth-child(2) th {
+  /* remove border-right to avoid overlapping with ::after */
+  border-right: none !important;
+}
+
+/* 3) Remove border-left from icon box (it was drawing a second vertical line) */
+.custom-grid .icon-box {
+  border-left: none !important;
+}
+
+/* 4) Ensure body cells keep their thin right border (data rows) */
+.custom-grid table tbody td {
+  border-right: 1px solid #dee2e6;
+}
+
+/* 5) If you still see a slightly thicker pixel due to subpixel rendering,
+   force the header-right line to sit exactly over the body-right line by
+   nudging the pseudo-element by 0.5px if needed (optional).
+   Uncomment only if you still see a mismatch:
+
+.custom-grid table thead th::after {
+  right: 0.5px;
+}
+*/
