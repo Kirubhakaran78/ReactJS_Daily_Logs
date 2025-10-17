@@ -1,0 +1,2237 @@
+html, body, * {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important; /* makes all text bold */
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.42857143;
+}
+
+
+/* Login Container */
+.login-container-simple {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 30px 5px 5px 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Tahoma, sans-serif, Helvetica, sans-serif;
+  position: relative;
+}
+
+/* Login Form Box */
+.login-form-box {
+  width: 90%;
+  max-width: 420px;
+  background-color: white;
+  padding: 40px 35px;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-right: 80px;
+}
+
+/* Login Header */
+.login-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/*Login Form SDMS Logo*/
+.SDMS_Logo img {
+  width: 130px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.mobile-icon {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chart-icon {
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.lock-icon {
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.product-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.2;
+}
+
+.login_versionno {
+  color: #405f7d !important;
+  font-size: 9px !important;
+}
+
+.version-number {
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Form Labels */
+.form-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #405f7d !important;
+  font-family: 'Roboto', sans-serif !important;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+/* Form Inputs */
+/* 🔹 Global Input Styling */
+.form-input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #d0d0d0;
+  background: transparent;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #353f49 !important;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-bottom-color: #4a90e2;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+
+
+.form-input.error {
+  border-bottom-color: #f44336;
+}
+
+/* Password Input Container */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.2rem;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #333;
+}
+
+/* Form Select */
+.form-select {
+  width: 100%;
+  padding: 8px 30px 8px 0;
+  border: none;
+  border-bottom: 1px solid #d0d0d0 !important;
+  background: transparent;
+  font-size: 13px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 18px;
+}
+
+.form-select:focus {
+  border-bottom-color: #4a90e2;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a90e2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.form-select:hover {
+  border-bottom-color: #999;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.form-select.error {
+  border-bottom-color: #f44336;
+}
+
+/* Error Text */
+.error-text {
+  color: #f44336;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* More Information */
+.more-info-container {
+  text-align: left;
+  margin: 20px 0 8px 0;
+}
+
+.more-info-link {
+  background: none;
+  border: none;
+  color: #1a73e8 !important;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.more-info-link:hover {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  font-size: 11px !important;
+  font-weight: bold !important;
+  transition: transform 0.2s ease;
+}
+
+.more-info-section {
+  background-color: #fafafa;
+  padding: 24px 20px;
+  border-radius: 0;
+  margin: 16px 0;
+  border: 1px solid #e8e8e8;
+  animation: slideDown 0.3s ease-out;
+}
+
+.more-info-section .form-field {
+  margin-bottom: 20px;
+}
+
+.more-info-section .form-field:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Forgot Password */
+.forgot-password-container {
+  text-align: center;
+  margin: 16px 0 0 0;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #1a73e8 !important;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px !important;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  background-color: #2883fe !important;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-size: 11px !important;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 24px;
+  box-shadow: 0 1px 3px rgba(74, 144, 226, 0.3);
+  text-align: center !important;       /* ✅ centers text horizontally */
+  display: inline-block !important;    /* ensures proper button rendering */
+}
+
+
+.login-button:hover:not(:disabled) {
+  background-color: #357abd;
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.4);
+  transform: translateY(-1px);
+}
+
+.login-button:active:not(:disabled) {
+  background-color: #2b6aa8;
+  transform: translateY(0);
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.cancel-button {
+  flex: 1;
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+/* Document Files Section */
+/* .document-files-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 10%;
+}
+
+.circle-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 2px dashed #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbfc;
+}
+
+.center-logo {
+  width: 22%;
+  height: auto;
+  z-index: 10;
+} */
+
+/*Circle Document files */
+/* Container: place to the right of login card */
+#login_documentfilesimages {
+  float: left;                /* keep original float */
+  margin-left: 70px;          /* keep your spacing */
+  box-sizing: border-box;
+  padding: 24px 0 0 24px;     /* avoid huge padding; adjust if needed */
+  width: 520px;               /* overall block width (tweak as required) */
+  height: 520px;              /* keep square to draw circular ring */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Outer wrapper to allow absolute child placement */
+.circle-wrap {
+  position: relative;
+  width: 460px;   /* visual size; tune to match screenshot */
+  height: 460px;
+  box-sizing: border-box;
+  display: block;
+  background: radial-gradient(circle at 50% 45%, rgba(14,91,202,0.03) 0%, rgba(14,91,202,0.01) 38%, transparent 70%);
+  border-radius: 50%;
+  overflow: visible;
+}
+
+/* decorative dashed ring behind icons */
+.circle-wrap .dashed-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(14,91,202,0.78);
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.03));
+}
+
+/* common chip style for outer icons */
+.circle-wrap .circle-logo {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  z-index: 5;
+  text-align: center;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* icon inside chip */
+.circle-wrap .circle-logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 6px;
+  pointer-events: none;
+}
+
+/* small label */
+.circle-wrap .icon-label {
+  display: block;
+  font-size: 8.5px !important;
+  color: #1f2b3a !important;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* center logo chip */
+.circle-wrap .center-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  /* background: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 14px 36px rgba(14,91,202,0.08); */
+  z-index: 10;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.circle-wrap .center-logo img {
+  width: 68%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* positions around the circle (cardinal positions) */
+/* top */
+.circle-wrap .icon-top {
+  left: 50%;
+  top: 3.8%;
+  transform: translate(-50%, 0);
+}
+
+/* right */
+.circle-wrap .icon-right {
+  right: 3.5%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* bottom */
+.circle-wrap .icon-bottom {
+  left: 50%;
+  bottom: 3.8%;
+  transform: translate(-50%, 0);
+}
+
+/* left */
+.circle-wrap .icon-left {
+  left: 3.5%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* hover lift */
+.circle-wrap .circle-logo:hover {
+  /* transform: translateY(-6px); */
+  box-shadow: 0 20px 36px rgba(14,91,202,0.12);
+}
+
+/* responsive behavior: shrink the illustration for smaller screens */
+@media (max-width: 1280px) {
+  #login_documentfilesimages { width: 420px; height: 420px; margin-left: 40px; }
+  .circle-wrap { width: 360px; height: 360px; }
+  .circle-wrap .dashed-ring { width: 300px; height: 300px; }
+  .circle-wrap .circle-logo { width: 92px; height: 92px; }
+  .circle-wrap .circle-logo img { width: 38px; height: 38px; }
+  .circle-wrap .center-logo { width: 120px; height: 120px; }
+}
+
+/* hide the illustration on very small devices to keep form usable */
+@media (max-width: 900px) {
+  #login_documentfilesimages { display: none; }
+}
+
+/* ensure no scrollbars appear inside this block */
+#login_documentfilesimages, .circle-wrap {
+  overflow: visible !important;
+}
+
+/* small accessibility / pointer fixes */
+.circle-wrap img { -webkit-user-drag: none; user-drag: none; }
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container-simple {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .login-form-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 30px 25px;
+  }
+
+  /* .document-files-section {
+    display: none;
+  } */
+}
+
+@media (max-width: 480px) {
+  .login-form-box {
+    padding: 25px 20px;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .form-input,
+  .form-select {
+    padding: 8px 0;
+  }
+
+  .login-button,
+  .cancel-button {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .login-container-simple {
+    background-color: #1a1a1a;
+  }
+
+  .login-form-box {
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+
+  .company-name {
+    color: #fff;
+  }
+
+  .product-name {
+    color: #ccc;
+  }
+
+  .version-number {
+    color: #999;
+  }
+
+  .form-label {
+    color: #fff;
+  }
+
+  .form-input,
+  .form-select {
+    color: #fff;
+    border-bottom-color: #4a4a4a;
+  }
+
+  .form-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+
+  .form-select:focus {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a90e2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+
+  .form-select:hover {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+
+  .form-input::placeholder {
+    color: #999;
+  }
+
+  .form-input:focus,
+  .form-select:focus {
+    border-bottom-color: #4a90e2;
+  }
+
+  .cancel-button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border-color: #4a4a4a;
+  }
+
+  .cancel-button:hover {
+    background-color: #4a4a4a;
+  }
+
+  .more-info-section {
+    background-color: #3a3a3a;
+    border-color: #4a4a4a;
+  }
+}
+
+/* Animation for form fields */
+.form-input:focus+.form-label,
+.form-select:focus+.form-label {
+  color:  #0e5bca;
+}
+
+/* Focus styles */
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-bottom-width: 1px;
+}
+
+/* Hover effects */
+.form-input:hover,
+.form-select:hover {
+  border-bottom-color: #999;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-button:disabled {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ---------- Add this at the END of your CSS file ---------- */
+
+/* force no shadows or outlines on inputs (overrides browser default focus glow) */
+.form-input,
+.form-select {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  outline: none !important;
+}
+
+/* keep only a bottom border, grey normally, blue on focus */
+/* Clean, solid straight bottom border — 2px thickness */
+.form-input {
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important; /* thicker grey line */
+  border-radius: 0 !important;                 /* ensures perfectly straight ends */
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-input:focus {
+  border-bottom: 2px solid #0e5bca !important; /* blue when focused */
+  border-radius: 0 !important;                 /* straight ends */
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+/* same for selects */
+.form-select {
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.form-select:focus {
+  border-bottom: 2px solid #0e5bca !important;
+  border-radius: 0 !important;
+}
+
+
+/* remove Chrome autofill yellow / inner shadow */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* small react-select tuning */
+.sdms-select__control {  /* react-select converts classNamePrefix prop */
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* change caret color */
+.sdms-select__indicator {
+  color: #666;
+}
+
+/* small padding / text-size */
+.sdms-select__single-value {
+  color: #333;
+  font-weight: 500;
+}
+
+/* menu portal (optional) */
+.ReactSelect__menuPortal {
+  z-index: 9999;
+}
+
+/* ❌ Don't affect dropdown text */
+.sdms-select__control,
+.sdms-select__single-value,
+.sdms-select__option {
+  font-family: 'Arial', sans-serif !important; /* or your previous font */
+  font-size: 13px !important;
+  color: #333 !important;
+}
+
+/* Override all previous input styles */
+input.form-input[type="text"],
+input.form-input[type="password"],
+input.form-input[type="email"],
+input.form-input[type="number"],
+input.form-input:not([type]),
+textarea.form-input {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 12px !important;
+  color: #353f49 !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+/* Focus effect */
+input.form-input:focus,
+textarea.form-input:focus {
+  border-bottom-color: #4a90e2 !important;
+}
+
+/* Placeholder styling */
+input.form-input::placeholder,
+textarea.form-input::placeholder {
+  color: #9a9a9a !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 12px !important;
+}
+
+/* 🔹 Exclude react-select dropdown from inheriting */
+.sdms-select__control,
+.sdms-select__value-container,
+.sdms-select__single-value,
+.sdms-select__option {
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #333 !important;
+}
+
+/* ------------------ Paste at the END of LoginPage.css ------------------ */
+/* Use Helvetica Neue (fallback to Helvetica/Arial) for user inputs + react-select search input */
+/* Note: Helvetica Neue is not hosted by Google; this uses the system font if available. */
+
+.login-form-box input.form-input[type="text"],
+.login-form-box input.form-input[type="password"],
+.login-form-box input.form-input[type="email"],
+.login-form-box input.form-input[type="number"],
+.login-form-box textarea.form-input,
+.login-form-box input.form-input:not([type]) {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #353f49 !important;
+}
+
+/* Placeholder color for those inputs */
+.login-form-box input.form-input::placeholder,
+.login-form-box textarea.form-input::placeholder {
+  color: #9a9a9a !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+
+/* React-select: the search input where the user types
+   classNamePrefix used earlier = "sdms-select" -> input is under .sdms-select__input > input
+   We style that actual text input only (not options). */
+.sdms-select__input > input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #353f49 !important;
+  padding: 0 !important; /* keep control padding consistent */
+}
+
+/* Make sure displayed value (singleValue) and dropdown options remain unaffected */
+.sdms-select__single-value,
+.sdms-select__value-container,
+.sdms-select__option {
+  /* keep your react-select defaults: force to Arial/normal so our search input font doesn't leak into options */
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  color: #333 !important;
+}
+
+/* Preserve control bottom border behavior */
+.login-form-box input.form-input,
+.sdms-select__control {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Focus underline for inputs remains the same */
+.login-form-box input.form-input:focus {
+  border-bottom: 2px solid #0e5bca !important;
+}
+
+/* react-select focused control still uses your custom style (so keep it consistent) */
+.sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Layout & spacing tweaks (paste at end of LoginPage.css) ---------- */
+
+/* 1) nudge the whole login box slightly up while keeping center alignment */
+.login-form-box {
+  transform: translateY(-22px); /* move up; tweak value as needed */
+}
+
+/* 2) reduce vertical gaps so more fits in one view */
+.form-grid {
+  gap: 12px !important; /* reduce space between rows */
+}
+
+/* tighten label -> input spacing */
+.form-field { 
+  gap: 6px;               /* space between label and input inside each field */
+  margin-bottom: 6px;     /* less space after each field */
+}
+
+/* make labels slightly smaller and less tall */
+.form-label {
+  font-size: 12px !important;
+  margin-bottom: 4px !important;
+  line-height: 1.2 !important;
+}
+
+/* make inputs slightly more compact */
+.form-input,
+.form-select,
+.sdms-select__control {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  min-height: 34px !important;
+}
+
+/* reduce spacing inside form actions row (buttons) */
+.form-actions {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* reduce top margin of the header to bring the form up more */
+.login-header {
+  margin-bottom: 16px;
+}
+
+/* slightly reduce overall padding inside the form box (so it fits better) */
+.login-form-box {
+  padding: 28px 26px;
+  max-width: 420px; /* keep width */
+}
+
+/* If any large margins remain around inputs, ensure direct form-field children are compact */
+.login-form-box .form-field:last-child {
+  margin-bottom: 0;
+}
+
+/* 3) Make react-select control background transparent (search input area)
+   Use classNamePrefix 'sdms-select' — these selectors match react-select DOM */
+.sdms-select__control,
+.sdms-select__value-container,
+.sdms-select__control .css-1hwfws3 { /* fallback for internal class naming */
+  background: transparent !important;   /* remove background */
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* ensure the actual input inside react-select is transparent and uses our input padding */
+.sdms-select__input > input {
+  background: transparent !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  color: #353f49 !important; /* keep typed search color */
+}
+
+/* menu (drop-down list) appearance — keep white background for readability */
+.sdms-select__menu {
+  background: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* Keep option paddings compact */
+.sdms-select__option {
+  padding: 8px 12px !important;
+}
+
+/* 4) small responsive tweak — remove extra margins on small screens */
+@media (max-width: 480px) {
+  .login-form-box {
+    padding: 18px 16px;
+    transform: translateY(-10px);
+  }
+  .form-grid { gap: 10px !important; }
+  .form-label { font-size: 12px !important; }
+  .form-input, .form-select { min-height: 32px !important; }
+}
+
+/* ---------- End layout & react-select background tweaks ---------- */
+
+/* ---------- Final alignment and spacing fix for Login Page ---------- */
+
+/* move login box slightly higher on page */
+.login-container-simple {
+  align-items: flex-start !important; /* aligns to top part */
+  padding-top: 100px !important; /* adjust to move slightly down/up */
+}
+
+/* adjust login box padding */
+.login-form-box {
+  margin-top: 0 !important;
+  padding: 30px 28px !important;
+  transform: translateY(-20px); /* lift up slightly */
+}
+
+/* compact spacing between form elements */
+.form-grid {
+  gap: 10px !important;
+}
+
+.form-field {
+  margin-bottom: 6px !important;
+}
+
+.form-label {
+  margin-bottom: 4px !important;
+  font-size: 12px !important;
+  color: #405f7d !important;
+}
+
+/* compact input height */
+.form-input {
+  padding: 6px 0 !important;
+  font-size: 12px !important;
+}
+
+/* compact dropdown control (react-select) */
+.sdms-select__control {
+  min-height: 34px !important;
+  padding: 0 !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+  background: transparent !important; /* remove background */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* focused blue line */
+.sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+}
+
+/* transparent search input */
+.sdms-select__input > input {
+  background: transparent !important;
+  color: #353f49 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+
+/* menu styling */
+.sdms-select__menu {
+  background: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* make login button smaller + centered text */
+.login-button {
+  font-size: 12px !important;
+  height: 38px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 4px !important;
+  margin-top: 18px !important;
+}
+
+/* reduce "More Information" spacing */
+.more-info-container {
+  margin: 10px 0 4px 0 !important;
+}
+
+/* reduce spacing in More Info section */
+.more-info-section {
+  padding: 16px 18px !important;
+  margin: 12px 0 !important;
+}
+
+/* make Forgot Password closer */
+.forgot-password-container {
+  margin-top: 8px !important;
+}
+
+/* responsive: keep compactness on small screens too */
+@media (max-width: 768px) {
+  .login-container-simple {
+    padding-top: 3vh !important;
+  }
+  .login-form-box {
+    padding: 24px 20px !important;
+  }
+}
+
+/* ---------- FINAL: layout, inputs, react-select, no-page-scroll ---------- */
+
+/* ---------- MORE INFORMATION: visual fixes (paste at end) ---------- */
+
+/* remove background / border for More Information area to match screenshot */
+.more-info-section {
+  background: transparent !important;   /* remove grey bg */
+  border: none !important;              /* remove border */
+  box-shadow: none !important;
+  padding: 8px 0 0 0 !important;        /* keep compact spacing; tweak if needed */
+  margin: 8px 0 0 0 !important;
+  animation: none !important;           /* optional: remove slide animation if you want instant show */
+  overflow: visible !important;         /* prevent inner scroll */
+}
+
+/* Make inner form fields in More Info look exactly like main form:
+   transparent selects/inputs, no inner backgrounds or extra borders */
+.more-info-section .form-field,
+.more-info-section .form-label,
+.more-info-section .form-input,
+.more-info-section .form-select,
+.more-info-section .sdms-select__control,
+.more-info-section .sdms-select__value-container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* keep only the standard bottom underline for inputs/selects inside More Info */
+.more-info-section .form-input {
+  border-bottom: 2px solid #d0d0d0 !important;
+  padding: 6px 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* make react-select control transparent and keep focus underline behavior */
+.more-info-section .sdms-select__control {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* on focus keep underline color */
+.more-info-section .sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+  box-shadow: none !important;
+}
+
+/* make the actual input in react-select transparent and compact */
+.more-info-section .sdms-select__input > input {
+  background: transparent !important;
+  padding: 6px 0 !important;
+  margin: 0 !important;
+  color: #353f49 !important;
+  caret-color: auto; /* default; we will programmatically set caret position */
+  /* do not center; keep normal left alignment */
+  text-align: left !important;
+}
+
+/* remove scrollbars inside the More Info area (and ensure content fits) */
+.more-info-section {
+  max-height: none !important;
+  overflow: visible !important; /* prevents internal scrollbar */
+}
+
+/* If any browser shows tiny scrollbars on pseudo elements, force no scrollbars */
+.more-info-section * {
+  overflow: visible !important;
+}
+
+/* Ensure the More Information link arrow doesn't rotate weirdly */
+.more-info-link .arrow-icon {
+  transform: none !important;
+}
+
+/* Slight spacing tweaks to match screenshot */
+.more-info-container { margin: 10px 0 6px 0 !important; }
+.more-info-section .form-label { margin-bottom: 6px !important; font-size: 12px !important; }
+
+/* Hide native select background arrow when inside More Info (if any) */
+.more-info-section .form-select {
+  background-image: none !important;
+}
+
+/* If you still see faint background from parent, enforce transparent */
+.login-form-box .more-info-section,
+.login-form-box .more-info-section .form-field {
+  background: transparent !important;
+}
+
+/* Accessibility / Focus ring: keep subtle outline for keyboard users */
+.more-info-section .form-input:focus,
+.more-info-section .sdms-select__input > input:focus {
+  outline: 2px solid rgba(14,91,202,0.06);
+  outline-offset: 2px;
+}
+
+/* small screens — keep more-info compact */
+@media (max-width: 768px) {
+  .more-info-section { padding: 6px 0 !important; }
+  .more-info-section .form-field { margin-bottom: 6px !important; }
+}
+
+/* ---------- LOGIN PAGE: final layout & More-info toggle ---------- */
+
+/* base: center-left layout like screenshot */
+.login-container-simple {
+  background-color: #f3f6f8;         /* soft page background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;          /* center horizontally */
+  align-items: flex-start;          /* align to top area so card sits lower */
+  padding: 40px 40px;               /* global page padding, keeps no-scroll */
+  box-sizing: border-box;
+  gap: 60px;                        /* space between card and illustration */
+  overflow-x: hidden;               /* avoid horizontal scrollbar */
+}
+
+/* login card appearance and default vertical position */
+.login-form-box {
+  width: 100%;
+  max-width: 430px;                 /* matches your requested max width */
+  background-color: #ffffff;
+  padding: 70px 35px !important;               /* compact padding */
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(14,91,202,0.06);
+  box-sizing: border-box;
+  transform: translateY(0);         /* adjusted when toggled */
+  transition: transform 220ms ease, padding 220ms ease;
+}
+
+/* reduce vertical gaps inside the form to fit page better */
+.form-grid { gap: 10px; }
+.form-field { margin-bottom: 6px; gap: 6px; }
+.form-label { font-size: 12px; margin-bottom: 4px; }
+.form-input, .form-select { padding: 6px 0; font-size: 12px; min-height: 34px; }
+
+/* main illustration on right */
+#login_documentfilesimages {
+  width: 520px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-left: 10px;
+  pointer-events: none;             /* illustration is decorative */
+}
+
+/* keep illustration responsive and not cause scrollbars */
+.circle-wrap { width: 460px; height: 460px; overflow: visible; }
+
+/* when More Information is opened we want to nudge the login card down and make room */
+.login-container-simple.more-open {
+  align-items: flex-start;          /* ensure top alignment stays */
+  padding-top: 36px;                /* small increase if needed */
+  gap: 48px;
+}
+
+/* when toggled: slightly move card up or down to better center visually */
+.login-container-simple.more-open .login-form-box {
+  transform: translateY(10px);     
+  padding: 28px 26px;
+}
+
+/* Make the More Information section expand without causing page scroll:
+   it grows in place and doesn't add extra body height */
+.more-info-section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 6px 0 0 0 !important;
+  margin: 8px 0 0 0 !important;
+  max-height: 800px;               /* large enough for content, but not infinite */
+  overflow: visible !important;    /* ensure it doesn't create internal scrollbar */
+  transition: max-height 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+/* more compact label + input spacing inside More Information */
+.more-info-section .form-field { margin-bottom: 8px; }
+.more-info-section .form-label { font-size: 12px; margin-bottom: 4px; }
+
+/* force selects / react-select controls inside More Info transparent */
+.more-info-section .sdms-select__control,
+.more-info-section .form-select,
+.more-info-section .form-input {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+}
+
+/* keep react-select input caret visible and input aligned left */
+.more-info-section .sdms-select__input > input {
+  background: transparent !important;
+  padding: 6px 0 !important;
+  text-align: left !important;
+}
+
+/* ensure there is no vertical overflow on the page at common viewport heights.
+   This prevents showing the browser scrollbar when More Info opens. */
+@media (min-height: 680px) {
+  .login-container-simple {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}
+
+/* On smaller screens hide the illustration and keep the form full width */
+@media (max-width: 1000px) {
+  #login_documentfilesimages { display: none; }
+  .login-container-simple { padding: 24px; }
+  .login-form-box { max-width: 720px; width: 100%; transform: translateY(0); }
+}
+
+/* On narrow mobile, reduce paddings to avoid scroll */
+@media (max-width: 480px) {
+  .login-container-simple { padding: 12px; gap: 12px; }
+  .login-form-box { padding: 16px; }
+  .form-grid { gap: 8px; }
+}
+
+/* subtle focus for keyboard users */
+.login-form-box .form-input:focus,
+.login-form-box .sdms-select__input > input:focus {
+  outline: 2px solid rgba(14,91,202,0.06);
+  outline-offset: 2px;
+}
+
+/* ---------- Toggle behaviour: when More Information is open ---------- */
+/* Add / remove the "more-open" class on .login-container-simple when More Info toggles */
+
+.login-container-simple.more-open {
+  /* we slightly reduce top padding and visually move card up via translate */
+  padding-top: 40px !important; /* ensure page spacing remains ok */
+}
+
+/* Move the login card up by ~60px when more info is open */
+.login-container-simple.more-open .login-form-box {
+  transform: translateY(-60px) !important;
+  transition: transform 220ms ease, padding 220ms ease;
+}
+
+/* Ensure the card returns smoothly when collapsed */
+.login-container-simple .login-form-box {
+  transition: transform 220ms ease, padding 220ms ease;
+}
+
+/* ---------- Inputs / searchable input font + color ---------- */
+/* Use a darker bluish/charcoal text color and consistent font */
+.login-form-box input.form-input,
+.login-form-box textarea.form-input,
+.login-form-box .form-select,
+.login-form-box .sdms-select__input > input /* react-select typing input */ {
+  color: #203645 !important;               /* darker text color like screenshot */
+  font-family: "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;             /* medium weight for typed value */
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  caret-color: #0e5bca !important;         /* subtle blue caret */
+}
+
+/* Make the displayed selected value of react-select (singleValue) consistent */
+.sdms-select__single-value {
+  color: #203645 !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+}
+
+/* Placeholder color slightly lighter */
+.login-form-box input.form-input::placeholder,
+.login-form-box .sdms-select__input > input::placeholder {
+  color: #9aa3ad !important;
+  font-weight: 400 !important;
+}
+
+/* Keep bottom underline styling consistent */
+.login-form-box input.form-input,
+.login-form-box .sdms-select__control {
+  border-bottom: 2px solid #e0e6ea !important;
+}
+
+.login-form-box input.form-input:focus,
+.login-form-box .sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+}
+
+/* ---------- Password eye (toggle) visibility & hit area fix ---------- */
+/* Ensure the password toggle is always visible and clickable.
+   If your JSX conditionally renders the button based on value, see the React change below. */
+
+.password-toggle {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  right: -4px; /* small offset so it sits within the input area */
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent !important;
+  border: none;
+  color: #6b7785 !important;
+  cursor: pointer;
+  z-index: 20;
+  outline: none;
+  transition: color 120ms ease, transform 120ms ease;
+}
+
+/* Slight hover effect */
+.password-toggle:hover {
+  color: #0e5bca !important;
+  transform: translateY(-50%) scale(1.03);
+}
+
+/* Make sure password input has right padding so button doesn't overlap text */
+.password-input-container .form-input {
+  padding-right: 44px !important; /* leaves room for the eye button */
+}
+
+/* Increase clickable hit area for accessibility */
+.password-toggle::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: -6px;
+  bottom: -6px;
+}
+
+/* If button looks clipped on some browsers, ensure parent is overflow visible */
+.password-input-container { position: relative; overflow: visible !important; }
+
+/* ---------- Prevent double scrollbars and keep page fitting ---------- */
+/* Keep illustration decorative but not causing scrollbars */
+#login_documentfilesimages,
+.circle-wrap {
+  max-width: 520px;
+  max-height: 520px;
+  overflow: visible !important;
+}
+
+/* Prevent body vertical overflow caused by internal tall elements */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Make sure login container doesn't cause double scrollbars */
+.login-container-simple {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* ---------- Responsive: ensure no vertical overflow when More Info opens ---------- */
+@media (max-height: 820px) {
+  /* slightly reduce card translate on smaller height devices */
+  .login-container-simple.more-open .login-form-box {
+    transform: translateY(-40px) !important;
+  }
+}
+
+/* Very small screens: hide illustration and don't translate card by a large amount */
+@media (max-width: 1000px) {
+  #login_documentfilesimages { display: none; }
+  .login-container-simple.more-open .login-form-box {
+    transform: translateY(-20px) !important;
+  }
+}
+
+/* ---------- Layout: top & bottom padding for login container ---------- */
+/* Adjust these values as needed */
+.login-container-simple {
+  padding-top: 70px !important;    /* top padding around page (you asked for top/bottom padding) */
+  padding-bottom: 60px !important; /* bottom padding to keep it centered visually */
+  box-sizing: border-box;
+}
+
+/* ---------- When More Information opens: move login box up by ~60px ---------- */
+/* We assume the container gets the class "more-open" (see React below).
+   If you prefer to use margin-top instead of transform, swap transform for margin-top. */
+.login-container-simple.more-open .login-form-box {
+  padding: 12px 20px 8px 20px !important;
+  transform: translateY(-10px) !important; /* nudges the entire card up by 60px */
+  transition: transform 220ms ease;
+}
+
+/* Alternate: if you prefer margin approach (uncomment to use)
+.login-container-simple.more-open .login-form-box {
+  margin-top: -60px !important;
+  transition: margin-top 220ms ease;
+}
+*/
+
+/* ---------- Global font + size ---------- */
+html, body, .login-container-simple, .login-form-box {
+  font-family: "Roboto", Arial, sans-serif !important; /* set Roboto globally for login page */
+  font-size: 12px !important;                           /* set the font size to 12px for all text */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure labels are 12px also */
+.form-label {
+  font-size: 12px !important;
+  font-weight: 600;
+}
+
+/* ---------- Searchable input (react-select) specific style ---------- */
+/* Make the text bold and use Verdana in the search input (where user types)
+   We assume you use classNamePrefix="sdms-select" for react-select. */
+.sdms-select__input > input {
+  font-family: "Verdana", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 700 !important;   /* bold for the typing area */
+  font-size: 12px !important;
+  color: #203645 !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* Also make the selected display (singleValue) look consistent */
+.sdms-select__single-value {
+  font-family: "Verdana", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 700 !important;
+  color: #203645 !important;
+  font-size: 12px !important;
+}
+
+/* ---------- Inputs color & underline consistency ---------- */
+.login-form-box input.form-input,
+.login-form-box .form-select,
+.login-form-box textarea.form-input {
+  color: #203645 !important;          /* main text color like screenshot */
+  font-size: 12px !important;
+  font-family: "Roboto", Arial, sans-serif !important;
+  border-bottom: 2px solid #e0e6ea !important;
+}
+
+.login-form-box input.form-input:focus,
+.login-form-box .sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+  outline: none !important;
+}
+
+/* ---------- Password eye: place in top-right corner of the input ---------- */
+/* Keep eye always present, place it inside the input container top-right */
+/* This CSS assumes you keep the .password-toggle element inside .password-input-container */
+.password-input-container { position: relative; overflow: visible; }
+
+.password-toggle {
+  position: absolute;
+  right: 6px;                 /* distance from right edge of input box */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-size: 16px;            /* size of the icon */
+  color: #6b7785;
+  cursor: pointer;
+  z-index: 30;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Hover state */
+.password-toggle:hover { color: #0e5bca; transform: translateY(-50%) scale(1.02); }
+
+/* Make sure the input leaves space for the button */
+.password-input-container .form-input {
+  padding-right: 48px !important; /* enough room for icon, adjust if icon looks clipped */
+}
+
+/* Add a larger clickable area to the icon for touch */
+.password-toggle::after {
+  content: "";
+  position: absolute;
+  left: -6px; right: -6px; top: -6px; bottom: -6px;
+}
+
+/* ---------- Small screen adjustments ---------- */
+@media (max-width: 1000px) {
+  /* hide illustration on smaller widths (keeps layout compact) */
+  #login_documentfilesimages { display: none; }
+  /* smaller translate so it doesn't overlap */
+  .login-container-simple.more-open .login-form-box {
+    transform: translateY(-30px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container-simple {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  .login-container-simple.more-open .login-form-box {
+    transform: translateY(-20px) !important;
+  }
+}
+
+/* ========== FINAL: Username & Password Input Styling ========== */
+/* Force Roboto, 12px, bold for username and password inputs */
+.login-form-box input.form-input[type="text"],
+.login-form-box input.form-input[type="password"] {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;  /* bold */
+  color: #353f49 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Force Roboto, 12px, bold for input labels */
+.login-form-box .form-label {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;  /* bold */
+  color: #405f7d !important;
+}
+
+/* Placeholder styling for inputs */
+.login-form-box input.form-input::placeholder {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #9a9a9a !important;
+}
+
+/* ========== FINAL: Password Eye Icon Positioning Fix ========== */
+/* Ensure password container allows absolute positioning */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Position the eye icon at the right end of the input */
+.password-toggle {
+  position: absolute;
+  right: 0 !important;           /* stick to right edge */
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 40px !important;              /* increased from 36px */
+  height: 40px !important;             /* increased from 36px */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  color: #6b7785 !important;
+  cursor: pointer;
+  z-index: 30;
+  padding: 0;
+  margin: 0;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Make the SVG icon itself bigger */
+.password-toggle svg {
+  width: 17px !important;              /* increase icon size */
+  height: 17px !important;             /* increase icon size */
+  font-size: 20px !important;
+}
+
+/* Hover effect for eye icon */
+.password-toggle:hover {
+  color: #6e7074 !important;
+  transform: translateY(-50%) scale(1.05) !important;
+}
+
+/* Make sure input has right padding so text doesn't overlap with icon */
+.password-input-container .form-input {
+  width: 100% !important;
+  padding-right: 48px !important;  /* space for the eye icon */
+  padding-left: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Increase clickable area for better UX */
+.password-toggle::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: -8px;
+  bottom: -8px;
+}
+
+/* ========== Remove Default Browser Password Eye Icon ========== */
+/* Remove default password reveal button in Edge/IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+}
+
+/* Remove default password reveal button in Chrome/Safari */
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+/* ========== Show Eye Icon Only When Typing ========== */
+/* Hide eye icon by default */
+.password-toggle {
+  position: absolute;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: none !important;              /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  border: none !important;
+  color: #6b7785 !important;
+  cursor: pointer;
+  z-index: 30;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+/* Show eye icon when input has value (using a class) */
+.password-input-container.has-value .password-toggle {
+  display: inline-flex !important;       /* show when typing */
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Make the SVG icon bigger */
+.password-toggle svg {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 20px !important;
+}
+
+/* Hover effect */
+.password-toggle:hover {
+  color: #5e6267 !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Input padding */
+.password-input-container .form-input {
+  width: 100% !important;
+  padding-right: 48px !important;
+  padding-left: 0 !important;
+  box-sizing: border-box;
+}
+
+
+/* ========== Dropdown Styling to Match Screenshot ========== */
+
+/* Style the react-select control (main dropdown box) */
+.sdms-select__control {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  min-height: 40px !important;
+  padding: 4px 0 !important;
+  cursor: pointer !important;
+  transition: border-color 0.2s ease;
+}
+
+/* Focused state */
+.sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+  box-shadow: none !important;
+}
+
+/* Hover state - subtle grey background */
+.sdms-select__control:hover {
+  background: rgba(0, 0, 0, 0.02) !important;
+  border-bottom-color: #999 !important;
+}
+
+/* Selected value text styling */
+.sdms-select__single-value {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #203645 !important;
+}
+
+/* Placeholder styling */
+.sdms-select__placeholder {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #9aa3ad !important;
+}
+
+/* ========== Smaller Hover Background for Dropdown Arrow ========== */
+
+/* Make the indicator container smaller */
+.sdms-select__indicator {
+  color: #666 !important;
+  padding: 4px !important;              /* reduced from 8px */
+  width: 28px !important;               /* set fixed width */
+  height: 28px !important;              /* set fixed height */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease;
+  border-radius: 7px;                   /* rounded corners */
+}
+
+/* Hover state with smaller background box */
+.sdms-select__indicator:hover {
+  color: #e0e3e0 !important;
+  background-color: #f7f8f6 !important;
+  border-radius: 7px;
+}
+
+/* Make the SVG icon inside smaller if needed */
+.sdms-select__indicator svg {
+  width: 16px !important;               /* adjust icon size */
+  height: 16px !important;
+}
+
+/* For dropdown arrow specifically */
+.sdms-select__dropdown-indicator {
+  padding: 4px !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+}
+
+.sdms-select__dropdown-indicator:hover {
+  color: #767e83 !important;
+  background-color: #d5d6d4 !important;
+  border-radius: 7px;
+}
+
+/* Remove separator line between value and arrow */
+.sdms-select__indicator-separator {
+  display: none !important;
+}
+
+/* Dropdown menu (options list) */
+.sdms-select__menu {
+  background: #fff !important;
+  border: 1px solid #e0e6ea !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  margin-top: 4px !important;
+  overflow: hidden !important;
+  z-index: 9999 !important;
+}
+
+/* Dropdown options */
+.sdms-select__option {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  font-size: 13px !important;
+  padding: 10px 12px !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease;
+  color: #203645 !important;
+}
+
+/* Option hover state - grey background */
+.sdms-select__option:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* Selected option in dropdown */
+.sdms-select__option--is-selected {
+  background-color: #e3f2fd !important;
+  color: #0e5bca !important;
+  font-weight: 600 !important;
+}
+
+/* Focused option (keyboard navigation) */
+.sdms-select__option--is-focused {
+  background-color: #f0f0f0 !important;
+}
+
+/* Value container (where selected value sits) */
+.sdms-select__value-container {
+  padding: 2px 8px 2px 0 !important;
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+/* Input (when searching) */
+.sdms-select__input {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #203645 !important;
+}
+
+.sdms-select__input > input {
+  font-family: 'Roboto', Arial, sans-serif !important;
+  font-size: 13px !important;
+  color: #203645 !important;
+}
+
+/* Clear indicator (X button) - optional, if clearable */
+.sdms-select__clear-indicator {
+  color: #999 !important;
+  padding: 8px !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease;
+}
+
+.sdms-select__clear-indicator:hover {
+  color: #f44336 !important;
+}
+
+/* Multi-value (if using multi-select) */
+.sdms-select__multi-value {
+  background-color: #e3f2fd !important;
+  border-radius: 3px !important;
+}
+
+.sdms-select__multi-value__label {
+  font-size: 12px !important;
+  color: #0e5bca !important;
+}
+
+/* Loading indicator */
+.sdms-select__loading-indicator {
+  color: #0e5bca !important;
+}
+
+/* Disabled state */
+.sdms-select__control--is-disabled {
+  background-color: #f5f5f5 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+/* ========== More Information Section Dropdown Styling ========== */
+/* Apply same styles to dropdowns inside More Information section */
+.more-info-section .sdms-select__control {
+  background: transparent !important;
+  border-bottom: 2px solid #d0d0d0 !important;
+}
+
+.more-info-section .sdms-select__control:hover {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+.more-info-section .sdms-select__control--is-focused {
+  border-bottom: 2px solid #0e5bca !important;
+}
+
+/* ========== FINAL FIX: SearchableSelect Font & Size ========== */
+
+/* Force Verdana, bold, specific size for react-select */
+
+/* The typing input (where user searches) */
+.sdms-select__input > input {
+  font-family: Verdana, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+/* The selected/displayed value */
+.sdms-select__single-value {
+  font-family: Verdana, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #333 !important;
+}
+
+/* Placeholder text */
+.sdms-select__placeholder {
+  font-family: Verdana, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #000000 !important; 
+}
+
+/* Dropdown options */
+.sdms-select__option {
+  font-family: Verdana, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+}
+
+/* Value container */
+.sdms-select__value-container {
+  font-family: Verdana, sans-serif !important;
+}
+
+/* Control (main dropdown box) */
+.sdms-select__control {
+  font-family: Verdana, sans-serif !important;
+  font-size: 12px !important;
+}
+
+/* Also apply to More Information section */
+.more-info-section .sdms-select__input > input,
+.more-info-section .sdms-select__single-value,
+.more-info-section .sdms-select__placeholder,
+.more-info-section .sdms-select__option,
+.more-info-section .sdms-select__value-container,
+.more-info-section .sdms-select__control {
+  font-family: Verdana, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+/* === MODAL BACKDROP === */
+.custom-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-start; /* move modal to top */
+  justify-content: center;
+  padding-top: 60px; /* spacing from top */
+  z-index: 1050;
+}
+
+/* === MODAL BOX === */
+.custom-modal {
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: modalSlideDown 0.25s ease-out;
+}
+
+@keyframes modalSlideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === HEADER === */
+.custom-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px !important;
+  background: linear-gradient(#eef6fb, #e6f0f8);
+  padding: 10px 18px;
+  border-bottom: 1px solid #d9eaf6;
+}
+.custom-modal-title {
+  color: #1e73be;
+  font-weight: 600;
+  font-size: 18px !important;
+}
+.custom-modal-close {
+  background: transparent;
+  border: 0;
+  font-size: 20px !important;
+  color: #0e89f5;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+/* === BODY === */
+.custom-modal-body {
+  font-size: 13px !important;
+  padding: 22px;
+  background: #fff;
+}
+.modal-label {
+  font-size: 13px !important;
+  color: #1a1a1a;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.required-star {
+  color: #d9534f;
+  margin-left: 6px;
+}
+
+/* === INPUT FIELD === */
+.modal-input {
+  width: 100%;
+  max-width: 520px;
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #c6c6c6;
+  padding: 6px 4px;
+  outline: none;
+  background: transparent;
+  font-size: 13px !important;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 0;           /* ✅ removes that little curve */
+  appearance: none;           /* ✅ removes browser default rounded edges */
+  -webkit-appearance: none;   /* ✅ for Safari/Chrome */
+  -moz-appearance: none;      /* ✅ for Firefox */
+}
+
+
+.modal-input:focus {
+  border-bottom: 2px solid #1e73be !important; /* blue line on focus */
+  box-shadow: none;
+}
+
+/* === FOOTER === */
+.custom-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+/* === BUTTON BASE === */
+.btn {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;  /* ✅ change this to adjust global button font size */
+}
+
+/* === SEND BUTTON (Primary Blue) === */
+.btn-primary {
+  background-color:#0069d9 !important;   /* ✅ your blue color */
+  color: #fff;
+  border: none;
+  opacity: 1 !important;                /* ✅ remove Bootstrap dimming */
+  filter: brightness(100%) !important;  /* ✅ ensure full brightness */
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;   /* ✅ slightly darker blue on hover */
+}
+
+/* .btn-primary:disabled {
+  background-color: #0069d9;   /* ✅ lighter blue when disabled */
+ /* cursor: not-allowed;
+} */
+
+/* === CLOSE BUTTON === */
+.btn-outline-secondary {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* === FONT SIZE for entire modal (optional) === */
+.custom-modal {
+  font-size: 15px !important; /* ✅ change this for modal body text */
+}
+
+.btn .btn-primary .custom-modal-send-btn{
+ background-color:rgba(1, 100, 250,1) !important;
+}
+
+/* === SMALL SCREENS === */
+@media (max-width: 540px) {
+  .custom-modal {
+    max-width: 92%;
+  }
+  .modal-input {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,445 @@
+/* ReusableGrid Styles */
+.reusable-grid {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Grid cell styling */
+.reusable-grid .jqx-grid-cell {
+  transition: all 0.2s ease;
+  border: none;
+  background-color: white;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+/* Selected row highlighting - Light blue background with blue left border only on first row */
+.reusable-grid .jqx-grid-row-selected,
+.reusable-grid .jqx-grid-cell-selected {
+  background-color: #e3f2fd !important;
+  color: #333 !important;
+  font-weight: normal;
+  border: none;
+}
+
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell {
+  background-color: #e3f2fd !important;
+  border: none;
+}
+
+/* Left border only on first cell of selected row */
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell:first-child {
+  border-left: 4px solid #2196f3 !important;
+}
+
+/* Additional specificity for first cell border */
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell:first-child,
+.reusable-grid .jqx-grid-cell-selected:first-child {
+  border-left: 4px solid #2196f3 !important;
+}
+
+/* Force border on first cell with maximum specificity */
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell:first-child,
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell:first-child:not(.jqx-grid-cell-hover) {
+  border-left: 4px solid #2196f3 !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Row hover effects */
+.reusable-grid .jqx-grid-row:hover,
+.reusable-grid .jqx-grid-row-hover {
+  background-color: #f5f5f5 !important;
+  cursor: pointer;
+}
+
+.reusable-grid .jqx-grid-row:hover .jqx-grid-cell,
+.reusable-grid .jqx-grid-row-hover .jqx-grid-cell {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+}
+
+/* Cell hover effects - individual cell highlighting */
+.reusable-grid .jqx-grid-cell:hover {
+  background-color: #e3f2fd !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reusable-grid .jqx-grid-cell:hover:not(.jqx-grid-cell-selected) {
+  background-color: #e3f2fd !important;
+}
+
+/* Enhanced cell focus styling */
+.reusable-grid .jqx-grid-cell:focus {
+  background-color: #e3f2fd !important;
+  outline: 2px solid #2196f3 !important;
+  outline-offset: -2px;
+}
+
+/* Cell hover class styling */
+.reusable-grid .jqx-grid-cell-hover {
+  background-color: #e3f2fd !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Ensure cell hover works with selected rows */
+.reusable-grid .jqx-grid-row-selected .jqx-grid-cell-hover {
+  background-color: #e3f2fd !important;
+}
+
+/* Selected row hover - maintain blue selection */
+.reusable-grid .jqx-grid-row-selected:hover {
+  background-color: #e3f2fd !important;
+}
+
+.reusable-grid .jqx-grid-row-selected:hover .jqx-grid-cell {
+  background-color: #e3f2fd !important;
+  border: none;
+}
+
+.reusable-grid .jqx-grid-row-selected:hover .jqx-grid-cell:first-child {
+  border-left: 4px solid #2196f3 !important;
+}
+
+/* Grid header styling */
+.reusable-grid .jqx-grid-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  height: 40px;
+  line-height: 40px;
+}
+
+.reusable-grid .jqx-grid-header .jqx-grid-cell {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  border: none;
+  padding: 0 12px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.reusable-grid .jqx-grid-header .jqx-grid-cell:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* Grid border styling */
+.reusable-grid .jqx-grid {
+  border: 1px solid #e0e0e0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+/* Grid row styling */
+.reusable-grid .jqx-grid-row {
+  height: 40px;
+  line-height: 40px;
+}
+
+.reusable-grid .jqx-grid-row .jqx-grid-cell {
+  height: 40px;
+  line-height: 40px;
+}
+
+
+/* Focus styling */
+.reusable-grid .jqx-grid-cell:focus {
+  outline: 2px solid #c7c7c7;
+  outline-offset: -2px;
+  background-color: #d0d0d0;
+}
+
+/* Active cell styling */
+.reusable-grid .jqx-grid-cell-active {
+  background-color: #c7c7c7 !important;
+  border: 2px solid #999 !important;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Input field styling with search icon */
+.reusable-grid input[type="text"] {
+  border: 1px solid #e0e0e0 !important;
+  outline: none !important;
+  background: white !important;
+  padding: 6px 12px 6px 30px !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  height: 28px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 8px center !important;
+  background-size: 12px 12px !important;
+}
+
+.reusable-grid input[type="text"]:focus {
+  border: none !important;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1) !important;
+  background: white !important;
+  height: 28px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 8px center !important;
+  background-size: 12px 12px !important;
+}
+.reusable-grid .jqx-grid-cell:focus {
+  outline: none !important;
+}
+ .jqx-input{
+  border: none !important;
+  margin-right: 15px !important;
+ }
+  .jqx-input:focus{
+    border-bottom: 2px solid #0e5bca !important;
+  }
+  .jqx-grid-header{
+    background-color: #ededea  !important;
+  }
+.reusable-grid input[type="text"]:hover {
+  border: none !important;
+  background: white !important;
+  height: 28px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 8px center !important;
+  background-size: 12px 12px !important;
+}
+
+/* Filter row styling for perfect alignment */
+.reusable-grid .jqx-grid-filterrow {
+  background-color: #f8f9fa;
+  height: 40px;
+  line-height: 40px;
+}
+
+.reusable-grid .jqx-grid-filterrow .jqx-grid-cell {
+  background-color: #f8f9fa;
+  border: none;
+  padding: 4px 12px;
+  box-sizing: border-box;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+/* Status color styling with enhanced visual hierarchy */
+.reusable-grid .status-active {
+  color: #28a745 !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(40, 167, 69, 0.1);
+}
+
+.reusable-grid .status-deactive {
+  color: #dc3545 !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(220, 53, 69, 0.1);
+}
+
+/* Custom cell color styling */
+.reusable-grid .custom-cell-color {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Drag handle styling - appears on hover */
+.reusable-grid .jqx-grid-row:hover .jqx-grid-cell:first-child::before {
+  content: "⋮⋮";
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: move;
+  line-height: 1;
+  letter-spacing: -4px;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.reusable-grid .jqx-grid-row:hover .jqx-grid-cell:first-child::before:hover {
+  cursor: move;
+  opacity: 1;
+  color: #333;
+  transform: translateY(-50%) scale(1.15);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.reusable-grid .jqx-grid-row:hover .jqx-grid-cell:first-child {
+  padding-left: -30px !important;
+  background-color: #fafafa;
+}
+
+
+
+/* Drag feedback styling */
+.reusable-grid .jqx-grid-row-drag {
+  opacity: 0.7;
+  background-color: #e3f2fd !important;
+  border: 2px dashed #2196f3 !important;
+}
+
+.reusable-grid .jqx-grid-row-drag .jqx-grid-cell {
+  background-color: #e3f2fd !important;
+  border: none !important;
+}
+
+/* Drag placeholder styling */
+.reusable-grid .jqx-grid-row-drag-placeholder {
+  background-color: #f5f5f5;
+  border: 1px dashed #ccc;
+  height: 40px;
+  opacity: 0.5;
+}
+
+/* Scrollbar styling - Force override jQWidgets default styles */
+.reusable-grid .jqx-grid {
+  overflow: hidden;
+}
+
+/* Override jQWidgets scrollbar styles */
+.reusable-grid .jqx-grid-scrollbar,
+.reusable-grid .jqx-grid-scrollbar-vertical,
+.reusable-grid .jqx-grid-scrollbar-horizontal {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+.reusable-grid .jqx-grid-scrollbar-vertical {
+  width: 12px !important;
+  right: 0 !important;
+}
+
+.reusable-grid .jqx-grid-scrollbar-horizontal {
+  height: 12px !important;
+  bottom: 0 !important;
+}
+
+/* Force scrollbar thumb styling */
+.reusable-grid .jqx-grid-scrollbar-thumb,
+.reusable-grid .jqx-grid-scrollbar-vertical .jqx-grid-scrollbar-thumb,
+.reusable-grid .jqx-grid-scrollbar-horizontal .jqx-grid-scrollbar-thumb {
+  background-color: white !important;
+  border-radius: 6px !important;
+  border: 1px solid #ddd !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.reusable-grid .jqx-grid-scrollbar-thumb:hover,
+.reusable-grid .jqx-grid-scrollbar-vertical .jqx-grid-scrollbar-thumb:hover,
+.reusable-grid .jqx-grid-scrollbar-horizontal .jqx-grid-scrollbar-thumb:hover {
+  background-color: #f0f0f0 !important;
+}
+
+/* Force scrollbar track styling */
+.reusable-grid .jqx-grid-scrollbar-track,
+.reusable-grid .jqx-grid-scrollbar-vertical .jqx-grid-scrollbar-track,
+.reusable-grid .jqx-grid-scrollbar-horizontal .jqx-grid-scrollbar-track {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+}
+
+/* Additional override for jQWidgets internal styles */
+.reusable-grid * .jqx-grid-scrollbar {
+  width: 8px !important;
+  background-color: white !important;
+}
+
+.reusable-grid * .jqx-grid-scrollbar-thumb {
+  background-color: white !important;
+  width: 6px !important;
+}
+
+/* Force scrollbar styling with maximum specificity */
+.reusable-grid .jqx-grid .jqx-grid-scrollbar,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-vertical,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-horizontal {
+  width: 12px !important;
+  height: 12px !important;
+  background: #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
+}
+
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-thumb,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-vertical .jqx-grid-scrollbar-thumb,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-horizontal .jqx-grid-scrollbar-thumb {
+  background: white !important;
+  background-color: white !important;
+  width: 10px !important;
+  height: 10px !important;
+  border: 1px solid #ddd !important;
+}
+
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-track,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-vertical .jqx-grid-scrollbar-track,
+.reusable-grid .jqx-grid .jqx-grid-scrollbar-horizontal .jqx-grid-scrollbar-track {
+  background: #f5f5f5 !important;
+  background-color: #f5f5f5 !important;
+}
+
+/* Target all possible scrollbar elements */
+.reusable-grid div[class*="scrollbar"] {
+  background-color: #f5f5f5 !important;
+  width: 18px !important;
+}
+
+.reusable-grid div[class*="scrollbar"] div[class*="thumb"] {
+  background-color: white !important;
+  width: 13px !important;
+  margin-left: 2px !important;
+}
+
+/* Grid content area */
+.reusable-grid .jqx-grid-content {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* Ensure proper grid height and scrolling */
+.reusable-grid .jqx-grid-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grid body styling for better scrolling */
+.reusable-grid .jqx-grid-content {
+  border: none !important;
+  background-color: white;
+}
+
+.reusable-grid .jqx-grid-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Fix scrollbar positioning */
+
+/* Smooth scrolling behavior */
+.reusable-grid {
+  scroll-behavior: smooth;
+}
+
+.reusable-grid * {
+  scroll-behavior: smooth;
+}

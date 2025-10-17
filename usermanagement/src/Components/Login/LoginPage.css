@@ -1,0 +1,532 @@
+/* Login Container */
+.login-container-simple {
+  background-color: #F0F2F5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+}
+
+/* Login Form Box */
+.login-form-box {
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-right: 50px;
+}
+
+/* Login Header */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2883fe, #1e6fe8);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(40, 131, 254, 0.3);
+}
+
+.mobile-icon {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chart-icon {
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.lock-icon {
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.product-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.2;
+}
+
+.version-number {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Form Labels */
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #e9ecef;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.form-input:focus {
+  border-bottom-color: #2883fe;
+  background-color: #f8f9ff;
+}
+
+.form-input.error {
+  border-bottom-color: #f44336;
+}
+
+/* Password Input Container */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.2rem;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #333;
+}
+
+/* Form Select */
+.form-select {
+  width: 100%;
+  padding: 12px 30px 12px 0;
+  border: none;
+  border-bottom: 2px solid #e9ecef;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.form-select:focus {
+  border-bottom-color: #2883fe;
+  background-color: #f8f9ff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232883fe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.form-select:hover {
+  border-bottom-color: #999;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.form-select.error {
+  border-bottom-color: #f44336;
+}
+
+/* Error Text */
+.error-text {
+  color: #f44336;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* More Information */
+.more-info-container {
+  text-align: left;
+  margin: 16px 0;
+}
+
+.more-info-link {
+  background: none;
+  border: none;
+  color: #2883fe;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.more-info-link:hover {
+  text-decoration: underline;
+}
+
+.arrow-icon {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.more-info-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 16px 0;
+  border: 1px solid #e9ecef;
+  animation: slideDown 0.3s ease-out;
+}
+
+.more-info-section .form-field {
+  margin-bottom: 16px;
+}
+
+.more-info-section .form-field:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Forgot Password */
+.forgot-password-container {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #2883fe;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Buttons */
+.login-button {
+  width: 100%;
+  background-color: #2883fe;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(40, 131, 254, 0.3);
+}
+
+.login-button:hover:not(:disabled) {
+  background-color: #1e6fe8;
+  box-shadow: 0 4px 12px rgba(40, 131, 254, 0.4);
+  transform: translateY(-1px);
+}
+
+.login-button:active:not(:disabled) {
+  background-color: #1a5fd4;
+  transform: translateY(0);
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  flex: 1;
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ccc;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+/* Document Files Section */
+.document-files-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 15%;
+}
+
+.circle-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px dashed #2883fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-logo {
+  width: 25%;
+  height: auto;
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container-simple {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .login-form-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 24px;
+  }
+  
+  .document-files-section {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-box {
+    padding: 20px;
+  }
+  
+  .login-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 10px 0;
+  }
+  
+  .login-button,
+  .cancel-button {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .login-container-simple {
+    background-color: #1a1a1a;
+  }
+  
+  .login-form-box {
+    background-color: #2d2d2d;
+    color: #fff;
+  }
+  
+  .company-name {
+    color: #fff;
+  }
+  
+  .product-name {
+    color: #ccc;
+  }
+  
+  .version-number {
+    color: #999;
+  }
+  
+  .form-label {
+    color: #fff;
+  }
+  
+  .form-input,
+  .form-select {
+    color: #fff;
+    border-bottom-color: #4a4a4a;
+  }
+  
+  .form-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+  
+  .form-select:focus {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232883fe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+  
+  .form-select:hover {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+  
+  .form-input::placeholder {
+    color: #999;
+  }
+  
+  .form-input:focus,
+  .form-select:focus {
+    border-bottom-color: #2883fe;
+  }
+  
+  .cancel-button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border-color: #4a4a4a;
+  }
+  
+  .cancel-button:hover {
+    background-color: #4a4a4a;
+  }
+  
+  .more-info-section {
+    background-color: #3a3a3a;
+    border-color: #4a4a4a;
+  }
+}
+
+/* Animation for form fields */
+.form-input:focus + .form-label,
+.form-select:focus + .form-label {
+  color: #2883fe;
+}
+
+/* Focus styles */
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-bottom-width: 2px;
+}
+
+/* Hover effects */
+.form-input:hover,
+.form-select:hover {
+  border-bottom-color: #999;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-button:disabled {
+  animation: pulse 1.5s ease-in-out infinite;
+}

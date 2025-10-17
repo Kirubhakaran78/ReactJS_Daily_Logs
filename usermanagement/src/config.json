@@ -1,0 +1,18 @@
+{
+    "SERVER_URL": "http://localhost:8090",
+    "Service_name":"AgaramUserManagement",
+    "Production_URL":false,
+    "MaxDrLicImages": "2",
+    "MaxProdImages": "5",
+    "MaxBranchImages": "2",
+    "TIME_OUT": 160000,
+    "MaxEditorWidth": "1340px",
+    "THEME_COLORS": {
+      "PRIMARY": "#007bff",
+      "SECONDARY": "#fc3"
+    },
+    "RSK": "UnEuNhoKLZBdIcLjKILZg==",
+    "SERVERMYSQL_URL": "http://192.168.1.17:8000/ReqHand/",
+    "ImgsExt": "jpeg,jpg,png"
+  }
+  
